@@ -1,0 +1,433 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+ul {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 72%;
+    margin: auto;
+    align-items: center;
+    min-height: 75px;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+    margin-bottom: 5%;
+    position: relative;
+}
+@media (max-width: 767px) {
+    header {
+        width: 100%;
+        justify-content: space-around;
+        margin: 0;
+        border: none;
+    }
+}
+header ul:first-of-type {
+    height: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    header ul:first-of-type {
+        display: flex !important;
+        position: absolute;
+        top: 37%;
+        left: 6%;
+    }
+}
+header ul:first-of-type li {
+    width: 15px;
+    height: 2.5px;
+    background-color: hsl(220deg 7% 51%);
+}
+@media (max-width: 767px) {
+    header > .img:first-of-type {
+        width: 30%;
+        position: relative;
+        left: 5%;
+    }
+}
+header ul:last-of-type {
+    display: flex;
+    flex-basis: 62%;
+    margin-left: 2%;
+    align-items: center;
+    position: relative;
+}
+@media (max-width: 767px) {
+    header ul:last-of-type {
+        position: absolute;
+        flex-direction: column;
+        left: -103%;
+        top: 0;
+        height: 100vh;
+        width: 63%;
+        background-color: white;
+        z-index: 11;
+        box-shadow: 120px 0px 0 20px #000000a3;
+        transition: .9s;
+    }
+}
+header ul:last-of-type li {
+    margin-right: 5%;
+    color: hsl(219, 9%, 45%);
+    position: relative;
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    header ul:last-of-type li {
+        color: black;
+        font-weight: 600;
+        padding-top: 6%;
+    }
+}
+header ul:last-of-type li::before {
+    content: '';
+    position: absolute;
+    background-color: hsl(26, 100%, 55%);
+    width: 0;
+    height: 2px;
+    top: 230%;
+    left: 0;
+    transition: .3s;
+}
+@media (max-width: 767px) {
+    header ul:last-of-type li::before {
+        top: 117%;
+    }
+}
+header ul:last-of-type li:hover:before {
+    width: 100%;
+}
+header .info {
+    margin-right: -2%;
+    width: 19px;
+}
+@media (max-width: 767px) {
+    header .info {
+        position: relative;
+        right: -16%;
+    }
+}
+header .info .show {
+    position: absolute;
+    background-color: white;
+    width: 280px;
+    right: -5%;
+    top: 94%;
+    overflow: hidden;
+    min-height: 200px;
+    box-shadow: 0 0 7px #ddd;
+    border-radius: 7px;
+    display: block !important;
+}
+@media (max-width: 767px) {
+    header .info .show {
+        position: absolute;
+        z-index: 10;
+        right: -121%;
+        top: 154%;
+    }
+}
+header .show h4 {
+    padding: 6%;
+    border-bottom: 1px solid #ddd;
+    text-transform: capitalize;
+    font-size: smaller;
+}
+.info .show div {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(219, 9%, 45%);
+    font-weight: 600;
+    font-size: smaller;
+}
+header .img:last-child {
+    text-align: end;
+    width: 42px;
+}
+header .info img,
+header .img:last-child img {
+    cursor: pointer;
+}
+header .img:last-child img {
+    border-radius: 50%;
+}
+header .img:last-child:hover img {
+    box-shadow: 0 0 0px 2px hsl(26deg 100% 55%);
+    border-radius: 50%;
+    transition: .3s;
+}
+@media (max-width: 767px) {
+    header > .img:last-of-type {
+        width: 7%;
+        position: relative;
+        right: -5%;
+    }
+}
+section {
+    display: flex;
+    width: 68%;
+    margin: auto;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
+}
+@media(max-width: 767px) {
+    section {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+}
+section nav {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 55%;
+}
+section nav .img {
+    width: 70%;
+    border-radius: 22px;
+    overflow: hidden;
+    cursor: zoom-in;
+}
+@media(max-width: 767px) {
+    section nav .img {
+        width: 100%;
+        height: 211px;
+        border-radius: 0;
+        position: relative;
+    }
+}
+@media(max-width: 767px) {
+    section .img img {
+        display: block !important;
+        position: absolute;
+        z-index: 1;
+        left: 100%;
+        transition: .5s;
+    }
+}
+@media(max-width: 767px) {
+    section .img img:first-of-type {
+        display: block !important;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+    }
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+@media(max-width: 767px) {
+    nav ul {
+        display: none;
+    }
+}
+section nav ul li {
+    flex-basis: 20%;
+    overflow: hidden;
+    border-radius: 9px;
+    margin-top: 5%;
+    transition: .3s;
+    cursor: pointer;
+}
+section nav ul li:hover,
+section nav ul .active {
+    box-shadow: 0 0 0 3px hsl(26deg 100% 55%);
+    opacity: 0.8;
+}
+aside {
+    margin: 7% 0;
+    flex-basis: 41%;
+    margin-left: -12%;
+}
+@media(max-width: 767px) {
+    aside {
+        margin: 5%;
+        margin-bottom: 2%;
+    }
+}
+section aside p {
+    color: hsl(26, 100%, 55%);
+    text-transform: uppercase;
+    font-size: smaller;
+    font-weight: 700;
+    margin-bottom: 4%;
+}
+@media(max-width: 767px) {
+    section aside p {
+        font-size: 11px;
+    }
+}
+section aside h2 {
+    font-size: xx-large;
+}
+@media(max-width: 767px) {
+    section aside h2 {
+        font-size: 25px;
+    }
+}
+section aside article {
+    color: hsl(219, 9%, 45%);
+    margin: 6% 0;
+    line-height: 1.4;
+}
+@media(max-width: 767px) {
+    section aside article {
+        font-size: 15px;
+        margin: 4% 0;
+    }
+}
+section aside .price {
+    position: relative;
+    color: black;
+    font-size: x-large;
+    margin-bottom: 10%;
+}
+@media(max-width: 767px) {
+    section aside .price {
+        margin-bottom: 3%;
+    }
+}
+section aside .price::before {
+    content: '$250.00';
+    text-decoration: line-through;
+    color: hsl(0deg 0% 71%);
+    font-size: small;
+    position: absolute;
+    top: 111%;
+}
+@media(max-width: 767px) {
+    section aside .price::before {
+        top: 36%;
+        right: 0;
+    }
+}
+section aside .price::after {
+    content: '50%';
+    color: hsl(26, 100%, 55%);
+    font-size: medium;
+    position: absolute;
+    top: 11%;
+    left: 24%;
+    background-color: hsl(26deg 100% 55% / 26%);
+    padding: 0.5% 1%;
+    border-radius: 8px;
+}
+@media(max-width: 767px) {
+    section aside .price::after {
+        left: 32%;
+    }
+}
+section aside > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media(max-width: 767px) {
+    section aside > div {
+        display: block;
+    }
+}
+section aside div .num {
+    width: 10%;
+    flex-basis: 35%;
+    display: flex;
+    background-color: #f7f8fd;
+    padding: 3% 0;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 8px;
+}
+@media(max-width: 767px) {
+    section aside div .num {
+        width: 100%;
+        margin-bottom: 3%;
+        padding: 4% 0;
+    }
+}
+section aside div .num img:first-child,
+section aside div .num img:last-child {
+    width: 7%;
+    cursor: pointer;
+}
+@media(max-width: 767px) {
+    section aside div .num img:first-child,
+    section aside div .num img:last-child {
+        width: 4%;
+    }
+}
+section aside div .num p {
+    color: black;
+}
+@media(max-width: 767px) {
+    section aside div .num p {
+        font-size: 14px;
+        margin: 0 20%;
+    }
+}
+section aside div button {
+    background-color: hsl(26, 100%, 55%);
+    border: none;
+    cursor: pointer;
+    color: white;
+    flex-basis: 61%;
+    padding: 3% 0;
+    border-radius: 8px;
+    font-weight: 500;
+    position: relative;
+}
+@media(max-width: 767px) {
+    section aside div button {
+        width: 100%;
+        padding: 4%;
+    }
+}
+section aside div button::before {
+    content: '';
+    position: absolute;
+    left: 25%;
+    background-image: url(images/icon-cart.svg);
+    background-size: 17px 16px;
+    display: inline-block;
+    width: 17px;
+    filter: brightness(0) invert(1); /* new */
+    height: 16px;
+}
+@media(max-width: 767px) {
+    section aside div button::before {
+        position: relative;
+        left: 0%;
+        margin-right: 5%;
+    }
+}
+section aside div button:hover,
+section aside div .num img:hover {
+    opacity: .8;
+}
+footer { 
+    font-size: 11px; text-align: center; 
+}
+footer a { 
+    color: hsl(228, 45%, 44%); 
+}
